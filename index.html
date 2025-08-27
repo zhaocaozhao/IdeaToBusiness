@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>智能封面生成器</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>智能封面生成器</h1>
+    <div class="actions">
+      <button id="exportPng">导出 PNG</button>
+    </div>
+  </header>
+  <div id="app">
+    <aside class="controls">
+      <section>
+        <label for="jsonData">JSON 数据</label>
+        <textarea id="jsonData" placeholder="粘贴数据或编辑后加载"></textarea>
+        <button id="loadData">加载数据</button>
+      </section>
+      <section>
+        <label for="titleInput">标题</label>
+        <input id="titleInput" type="text" />
+      </section>
+      <section>
+        <label for="subtitleInput">话术/副标题</label>
+        <input id="subtitleInput" type="text" />
+      </section>
+      <section>
+        <label for="priceInput">价格</label>
+        <input id="priceInput" type="text" />
+      </section>
+      <section>
+        <label for="imageInput">商品图片</label>
+        <input id="imageInput" type="file" accept="image/*" />
+      </section>
+      <section>
+        <label for="themeSelect">主题</label>
+        <select id="themeSelect">
+          <option value="vibrant">活力橙</option>
+          <option value="tech">科技灰</option>
+          <option value="dark">极夜黑</option>
+          <option value="milk">牛奶白</option>
+          <option value="mint">清新薄荷</option>
+        </select>
+      </section>
+      <section>
+        <label for="templateSelect">模板</label>
+        <select id="templateSelect">
+          <option value="single-left">左图右文</option>
+          <option value="single-top">上图下文</option>
+        </select>
+      </section>
+    </aside>
+    <main class="preview">
+      <canvas id="canvas" width="1080" height="608"></canvas>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
